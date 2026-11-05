@@ -1,0 +1,137 @@
+/* Mobile Home Page Styles (Casual, Clean Story Bubbles, 2-Column Feed) */
+
+.mobileContainer {
+  padding: 1rem 1rem 5.5rem;
+  background-color: var(--background);
+}
+
+.searchHeader {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background-color: rgba(251, 251, 249, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 0.75rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.mobileSearchInput {
+  flex: 1;
+  padding: 0.625rem 0.875rem 0.625rem 2.25rem;
+  font-size: 0.8125rem;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  outline: none;
+}
+
+.storyCategories {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 0.5rem 0 1rem;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.storyCategories::-webkit-scrollbar {
+  display: none;
+}
+
+.storyItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.375rem;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.storyAvatar {
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: var(--radius-full);
+  padding: 2px;
+  border: 2px solid var(--primary);
+  background-color: var(--surface);
+  overflow: hidden;
+}
+
+.storyAvatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+}
+
+.storyLabel {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: var(--foreground);
+  max-width: 4rem;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mobileBanner {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin: 0.5rem 0 1.25rem;
+  min-height: 160px;
+  background: linear-gradient(135deg, #2d5bff, #6482ff);
+  color: #ffffff;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mobileProductGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.mobileProductCard {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobileImageContainer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1.05;
+  background-color: var(--secondary);
+  overflow: hidden;
+}
+
+.mobileImageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mobileAddBtn {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--radius-full);
+  background-color: rgba(255, 255, 255, 0.95);
+  color: var(--foreground);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+

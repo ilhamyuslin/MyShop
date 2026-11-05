@@ -1,0 +1,524 @@
+/* Desktop Hero Section - Modern Flat Design (Tokopedia / Shopee Structure + Clean Minimal Aesthetic) */
+
+.heroContainer {
+  padding: 1.25rem 0 2rem;
+}
+
+/* Location & Delivery Info Bar */
+.deliveryBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.875rem;
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.locationPicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  cursor: pointer;
+  color: #374151;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+.locationPicker:hover {
+  color: #111827;
+}
+
+.locationHighlight {
+  color: #111827;
+  font-weight: 700;
+}
+
+.promoBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: #047857;
+  background-color: #ecfdf5;
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+  border: 1px solid #d1fae5;
+}
+
+/* Banner Grid (70% Carousel + 30% Side Stack) */
+.bannerGrid {
+  display: grid;
+  grid-template-columns: 2.3fr 1fr;
+  gap: 1rem;
+}
+
+/* Carousel Box (Embla Carousel Viewport) */
+.carouselBox {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  height: 320px;
+  background-color: #f3f2ee;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.carouselBox:active {
+  cursor: grabbing;
+}
+
+/* Horizontal Track (Embla Container) */
+.carouselTrack {
+  display: flex;
+  height: 100%;
+  touch-action: pan-y pinch-zoom;
+}
+
+.carouselSlide {
+  min-width: 100%;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  flex: 0 0 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
+  background-size: cover;
+  background-position: center right;
+}
+
+.carouselOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(247, 246, 242, 0.96) 0%, rgba(247, 246, 242, 0.8) 55%, transparent 100%);
+  pointer-events: none;
+}
+
+.carouselContent {
+  position: relative;
+  z-index: 10;
+  max-width: 440px;
+}
+
+.carouselTag {
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #111827;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0.25rem 0.625rem;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.carouselTitle {
+  font-size: 1.875rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #111827;
+  letter-spacing: -0.02em;
+}
+
+.carouselDesc {
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin-top: 0.5rem;
+  line-height: 1.5;
+}
+
+.carouselBtn {
+  margin-top: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #111827;
+  padding: 0.5rem 1.125rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+
+.carouselBtn:hover {
+  background-color: #374151;
+}
+
+/* Subtle & Understated Progress Lines (Samar & Dinamis) */
+.carouselControls {
+  position: absolute;
+  bottom: 1.25rem;
+  right: 1.5rem;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  background: transparent;
+  padding: 0;
+  border: none;
+  pointer-events: auto;
+}
+
+.carouselIndicators {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.dot {
+  width: 1.25rem;
+  height: 3px;
+  background-color: rgba(0, 0, 0, 0.18);
+  border-radius: 9999px;
+  border: none;
+  padding: 0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.dot:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.dotActive {
+  background-color: #111827;
+  width: 2.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Side Banners (Shopee Mall / Promo Right Stack) */
+.sideBannerStack {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 320px;
+}
+
+.sideBanner {
+  flex: 1;
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: #f7f6f2;
+  border: 1px solid #e9e8e2;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+  background-size: cover;
+  background-position: right center;
+}
+
+.sideBanner:hover {
+  border-color: #d1d5db;
+  transform: translateY(-2px);
+}
+
+.sideBannerContent {
+  position: relative;
+  z-index: 10;
+  max-width: 180px;
+}
+
+.sideBannerTag {
+  font-size: 0.625rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #4b5563;
+  letter-spacing: 0.05em;
+}
+
+.sideBannerTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.25;
+  margin-top: 0.25rem;
+}
+
+.sideBannerLink {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #111827;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Shortcut Icon Grid (Flat Monochrome Design Icons) */
+.shortcutBar {
+  margin-top: 1.75rem;
+  padding: 1.25rem 0;
+  border-top: 1px solid #eae9e3;
+  border-bottom: 1px solid #eae9e3;
+}
+
+.shortcutGrid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 0.5rem;
+}
+
+.shortcutItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  transition: transform 0.15s ease;
+}
+
+.shortcutItem:hover {
+  transform: translateY(-2px);
+}
+
+.shortcutIconWrapper {
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 12px;
+  background-color: #ffffff;
+  border: 1px solid #e5e5e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1f2937;
+  transition: all 0.15s ease;
+}
+
+.shortcutItem:hover .shortcutIconWrapper {
+  background-color: #111827;
+  color: #ffffff;
+  border-color: #111827;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.shortcutLabel {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: #4b5563;
+  line-height: 1.2;
+  transition: color 0.15s ease;
+}
+
+.shortcutItem:hover .shortcutLabel {
+  color: #111827;
+}
+
+/* Category Quick Bar */
+.categorySection {
+  margin-top: 2rem;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.sectionTitle {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -0.02em;
+}
+
+.sectionLink {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #2563eb;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.sectionLink:hover {
+  text-decoration: underline;
+}
+
+/* Category Slider Section */
+.categorySection {
+  margin-top: 2.25rem;
+  position: relative;
+}
+
+.categorySliderWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.categorySlider {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 0.25rem 0.25rem 0.75rem;
+  width: 100%;
+}
+
+.categorySlider::-webkit-scrollbar {
+  display: none;
+}
+
+.categoryCard {
+  background-color: #ffffff;
+  border: 1px solid #e9e8e2;
+  border-radius: 10px;
+  padding: 0.875rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  min-width: 220px;
+  flex-shrink: 0;
+}
+
+.categoryCard:hover {
+  border-color: #111827;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.sliderArrow {
+  position: absolute;
+  top: 42%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 9999px;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.sliderArrow:hover {
+  background-color: #111827;
+  color: #ffffff;
+  border-color: #111827;
+}
+
+.sliderArrowPrev {
+  left: -1rem;
+}
+
+.sliderArrowNext {
+  right: -1rem;
+}
+
+.categoryImg {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 8px;
+  object-fit: cover;
+  background-color: #f3f3f0;
+}
+
+.categoryName {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #111827;
+  line-height: 1.2;
+}
+
+.categoryCount {
+  font-size: 0.6875rem;
+  color: #9ca3af;
+  margin-top: 0.125rem;
+}
+
+/* Product Section */
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.25rem;
+}
+
+.productCard {
+  background: #ffffff;
+  border: 1px solid #e9e8e2;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.productCard:hover {
+  transform: translateY(-4px);
+  border-color: #cfceca;
+  box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.06);
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1.05;
+  background-color: #f7f6f2;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.4s ease;
+}
+
+.productCard:hover .image {
+  transform: scale(1.03);
+}
+
+.quickAddBtn {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 0.75rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #111827;
+  border: 1px solid #e5e7eb;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  transform: translateY(4px);
+  transition: all 0.15s ease;
+}
+
+.productCard:hover .quickAddBtn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.quickAddBtn:hover {
+  background-color: #111827;
+  color: #ffffff;
+  border-color: #111827;
+}

@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+:root {
+  /* Modern Warm & Casual Aesthetic (Off-White, Clean Slate & Warm Indigo) */
+  --background: #fbfbf9;
+  --surface: #ffffff;
+  --foreground: #1c1f26;
+  
+  --primary: #2d5bff;
+  --primary-hover: #1e46db;
+  --primary-light: #eff3ff;
+  --primary-foreground: #ffffff;
+  
+  --secondary: #f4f3ef;
+  --secondary-foreground: #2d3139;
+  
+  --muted: #6e7480;
+  --muted-light: #9aa0ac;
+  --border: #e9e8e2;
+  --border-light: #f1f0eb;
+  
+  --card: #ffffff;
+  --card-foreground: #1c1f26;
+  
+  --radius-sm: 0.5rem;
+  --radius-md: 0.875rem;
+  --radius-lg: 1.25rem;
+  --radius-full: 9999px;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d6d5ce;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b5b4ad;
+}

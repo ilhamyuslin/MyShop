@@ -1,0 +1,65 @@
+/* Mobile Floating Bottom Bar Styling */
+.bottomNav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.625rem 0.5rem calc(0.625rem + env(safe-area-inset-bottom, 0px));
+  background-color: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.navItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.15s ease, transform 0.1s ease;
+  position: relative;
+  min-width: 3.5rem;
+  padding: 0.25rem 0;
+}
+
+.navItemActive {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.navItemActive::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 1.25rem;
+  height: 2px;
+  background-color: var(--primary);
+  border-radius: var(--radius-full);
+}
+
+.cartBadge {
+  position: absolute;
+  top: 0px;
+  right: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1rem;
+  height: 1rem;
+  padding: 0 3px;
+  font-size: 0.625rem;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: var(--primary);
+  border-radius: var(--radius-full);
+}
+
