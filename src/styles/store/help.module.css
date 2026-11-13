@@ -1,0 +1,352 @@
+.pageContainer {
+  padding-top: 24px;
+  padding-bottom: 80px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+.breadcrumb a {
+  color: #64748b;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.breadcrumb a:hover {
+  color: var(--primary, #2d5a43);
+}
+
+.breadcrumbCurrent {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+/* Hero Help Header */
+.heroHelpCard {
+  background: #fbfbf9;
+  border: 1px solid #edf0ec;
+  border-radius: 20px;
+  padding: 44px 32px;
+  text-align: center;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.helpBadge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--primary, #2d5a43);
+  background: rgba(45, 90, 67, 0.08);
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.heroTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1c1f26;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+
+.heroSubtitle {
+  font-size: 0.95rem;
+  color: #64748b;
+  max-width: 520px;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.searchBox {
+  width: 100%;
+  max-width: 540px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 16px;
+  color: #94a3b8;
+  pointer-events: none;
+}
+
+.searchInput {
+  width: 100%;
+  height: 48px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 12px;
+  padding-left: 48px;
+  padding-right: 16px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #1e293b;
+  background: #ffffff;
+  outline: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+  transition: border-color 0.15s ease;
+}
+
+.searchInput:focus {
+  border-color: var(--primary, #2d5a43);
+}
+
+/* Category Grid */
+.categoryGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+@media (max-width: 1024px) {
+  .categoryGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .categoryGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.categoryCard {
+  background: #ffffff;
+  border: 1.5px solid #edf0ec;
+  border-radius: 16px;
+  padding: 22px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.categoryCard:hover {
+  border-color: var(--primary, #2d5a43);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(45, 90, 67, 0.06);
+}
+
+.categoryCardActive {
+  border-color: var(--primary, #2d5a43);
+  background: rgba(45, 90, 67, 0.02);
+}
+
+.catIconWrapper {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: #eaf3ed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary, #2d5a43);
+}
+
+.catTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.catDesc {
+  font-size: 0.8rem;
+  color: #64748b;
+  line-height: 1.45;
+}
+
+/* 2-Column Main Content: FAQ Accordion + Toko Care Card */
+.mainLayout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 36px;
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .mainLayout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* FAQ Accordion List */
+.faqSection {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.faqSectionTitle {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.accordionItem {
+  background: #ffffff;
+  border: 1px solid #edf0ec;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: border-color 0.15s ease;
+}
+
+.accordionItemOpen {
+  border-color: var(--primary, #2d5a43);
+}
+
+.accordionHeader {
+  width: 100%;
+  padding: 18px 20px;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1e293b;
+  gap: 12px;
+}
+
+.accordionHeader:hover {
+  color: var(--primary, #2d5a43);
+}
+
+.accordionIcon {
+  color: #94a3b8;
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+}
+
+.accordionIconOpen {
+  transform: rotate(180deg);
+  color: var(--primary, #2d5a43);
+}
+
+.accordionBody {
+  padding: 0 20px 20px;
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.65;
+  border-top: 1px solid #f8fafc;
+  padding-top: 14px;
+}
+
+/* Sidebar Toko Care / Contact Card */
+.contactCard {
+  background: #ffffff;
+  border: 1px solid #edf0ec;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  position: sticky;
+  top: 96px;
+}
+
+.contactHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f1f5f9;
+  margin-bottom: 18px;
+}
+
+.contactHeaderIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #eaf3ed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary, #2d5a43);
+}
+
+.contactTitle {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #1e293b;
+}
+
+.contactSubtitle {
+  font-size: 0.78rem;
+  color: #64748b;
+}
+
+.contactDesc {
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+.contactOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contactBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.btnWhatsapp {
+  background: #25d366;
+  color: #ffffff;
+}
+
+.btnWhatsapp:hover {
+  background: #20ba59;
+}
+
+.btnEmail {
+  background: #f1f5f9;
+  color: #334155;
+  border: 1px solid #e2e8f0;
+}
+
+.btnEmail:hover {
+  background: #e2e8f0;
+}
+
+.operatingHours {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid #f8fafc;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  color: #64748b;
+}
