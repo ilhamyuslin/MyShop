@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Search, ShoppingBag, ChevronDown, ShieldCheck, HelpCircle, Truck, Layers } from "lucide-react";
 import { useCartStore } from "@/store/useCartStore";
@@ -8,8 +8,13 @@ import { DUMMY_CATEGORIES } from "@/lib/dummy-data";
 import styles from "@/styles/store/navbar.desktop.module.css";
 
 export function StoreNavbarDesktop() {
+  const [mounted, setMounted] = useState(false);
   const totalItems = useCartStore((state) => state.getTotalItems());
   const [isCategoryOpen, setIsCategoryOpen] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <header className={styles.navbarWrapper}>
@@ -73,7 +78,7 @@ export function StoreNavbarDesktop() {
                     key={cat.id}
                     href={`/products?category=${encodeURIComponent(cat.name)}`}
                     onClick={() => setIsCategoryOpen(false)}
-                    className="flex items-center justify-between rounded-lg px-3 py-2 text-xs font-medium text-slate-700 hover:bg-slate-50 hover:text-blue-600 transition"
+                    className="flex items-center justify-between rounded-lg px-3 py-2 text-xs font-medium text-slate-700 hover:bg-slate-50 hover:text-[#2d5a43] transition"
                   >
                     <span>{cat.name}</span>
                     <span className="text-[10px] text-slate-400">{cat.itemCount}</span>
@@ -113,7 +118,7 @@ export function StoreNavbarDesktop() {
             {/* Cart Icon with badge */}
             <Link href="/cart" className={styles.cartBtn} aria-label="Keranjang Belanja">
               <ShoppingBag className="w-5 h-5 text-slate-800" />
-              {totalItems > 0 && <span className={styles.cartBadge}>{totalItems}</span>}
+              {mounted && totalItems > 0 && <span className={styles.cartBadge}>{totalItems}</span>}
             </Link>
 
             <span className={styles.authDivider} />

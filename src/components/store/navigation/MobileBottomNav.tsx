@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Home, Compass, ShoppingBag, ClipboardList, LifeBuoy } from "lucide-react";
@@ -7,8 +8,13 @@ import { useCartStore } from "@/store/useCartStore";
 import styles from "@/styles/store/navbar.mobile.module.css";
 
 export function MobileBottomNav() {
+  const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
   const totalItems = useCartStore((state) => state.getTotalItems());
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const navItems = [
     { label: "Home", href: "/", icon: Home },
@@ -32,7 +38,7 @@ export function MobileBottomNav() {
           >
             <div className="relative">
               <Icon className="w-5 h-5" />
-              {typeof item.badge === "number" && item.badge > 0 && (
+              {mounted && typeof item.badge === "number" && item.badge > 0 && (
                 <span className={styles.cartBadge}>{item.badge}</span>
               )}
             </div>
@@ -43,4 +49,3 @@ export function MobileBottomNav() {
     </nav>
   );
 }
-

@@ -1,27 +1,36 @@
 @import "tailwindcss";
 
 :root {
-  /* Modern Warm & Casual Aesthetic (Off-White, Clean Slate & Warm Indigo) */
+  /* Modern Casual Minimalist - Forest Green & Warm Neutral Base */
   --background: #fbfbf9;
   --surface: #ffffff;
   --foreground: #1c1f26;
   
-  --primary: #2d5bff;
-  --primary-hover: #1e46db;
-  --primary-light: #eff3ff;
+  /* Primary Accent: Earthy Forest Green */
+  --primary: #2d5a43;
+  --primary-hover: #224734;
+  --primary-light: #eaf3ed;
   --primary-foreground: #ffffff;
   
-  --secondary: #f4f3ef;
+  /* Secondary: Soft Natural Linen */
+  --secondary: #f4f3ee;
   --secondary-foreground: #2d3139;
   
+  /* Neutrals & Borders */
   --muted: #6e7480;
   --muted-light: #9aa0ac;
   --border: #e9e8e2;
   --border-light: #f1f0eb;
   
+  /* Cards */
   --card: #ffffff;
   --card-foreground: #1c1f26;
+
+  /* Accent highlights (Sale, Tag) */
+  --accent-sale: #c85a32;
+  --accent-sale-light: #fbf0ec;
   
+  /* Consistent Border Radii */
   --radius-sm: 0.5rem;
   --radius-md: 0.875rem;
   --radius-lg: 1.25rem;
@@ -33,6 +42,8 @@
   --color-surface: var(--surface);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-light: var(--primary-light);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);

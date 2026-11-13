@@ -37,7 +37,7 @@ export function HomeMobile() {
           className="p-2 rounded-full bg-slate-100 text-slate-700"
           title="Admin Mode"
         >
-          <ShieldCheck className="w-5 h-5 text-blue-600" />
+          <ShieldCheck className="w-5 h-5 text-[#2d5a43]" />
         </Link>
       </header>
 
@@ -82,7 +82,7 @@ export function HomeMobile() {
           <span className="text-xs opacity-90">Berlaku s/d Akhir Pekan</span>
           <Link
             href="/products"
-            className="px-3.5 py-1.5 rounded-full bg-white text-blue-700 text-xs font-bold"
+            className="px-3.5 py-1.5 rounded-full bg-white text-[#224734] text-xs font-bold"
           >
             Cek Sekarang
           </Link>
@@ -92,7 +92,7 @@ export function HomeMobile() {
       {/* 2-Column Product Feed */}
       <div className="flex items-center justify-between mb-3 mt-4">
         <h3 className="text-sm font-bold text-slate-900">Rekomendasi Pilihan</h3>
-        <Link href="/products" className="text-xs font-semibold text-blue-600">
+        <Link href="/products" className="text-xs font-semibold text-[#2d5a43]">
           Lihat Semua
         </Link>
       </div>
@@ -133,7 +133,7 @@ export function HomeMobile() {
 
               <div className="mt-2 pt-1.5 border-t border-slate-100">
                 <div className="flex items-baseline gap-1">
-                  <span className="text-xs font-extrabold text-blue-600">
+                  <span className="text-xs font-extrabold text-[#2d5a43]">
                     {formatRupiah(product.discountPrice ?? product.price)}
                   </span>
                 </div>

@@ -9,8 +9,8 @@ export default function StoreLayout({
 }) {
   return (
     <div className="flex min-h-screen flex-col">
-      {/* Desktop Header (Hidden on Mobile) */}
-      <div className="hidden md:block">
+      {/* Desktop Header (Sticky at top) */}
+      <div className="sticky top-0 z-50 hidden md:block">
         <StoreNavbarDesktop />
       </div>
 

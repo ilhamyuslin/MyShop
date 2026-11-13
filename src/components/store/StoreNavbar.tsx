@@ -7,7 +7,7 @@ export function StoreNavbar() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-8">
         {/* Brand */}
         <Link href="/" className="flex items-center gap-2">
-          <span className="text-xl font-bold tracking-tight text-blue-600 dark:text-blue-400">
+          <span className="text-xl font-bold tracking-tight text-[#2d5a43]">
             MyShop
           </span>
         </Link>
@@ -41,13 +41,13 @@ export function StoreNavbar() {
             aria-label="Keranjang"
           >
             <ShoppingCart className="w-5 h-5" />
-            <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-blue-600 text-[10px] font-bold text-white">
+            <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-[#2d5a43] text-[10px] font-bold text-white">
               0
             </span>
           </Link>
           <Link
             href="/login"
-            className="inline-flex items-center gap-1.5 rounded-lg bg-blue-600 px-3.5 py-1.5 text-xs font-semibold text-white shadow-sm hover:bg-blue-500 transition"
+            className="inline-flex items-center gap-1.5 rounded-lg bg-[#2d5a43] px-3.5 py-1.5 text-xs font-semibold text-white shadow-sm hover:bg-[#224734] transition"
           >
             <User className="w-3.5 h-3.5" />
             Masuk
