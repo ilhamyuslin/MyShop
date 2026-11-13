@@ -1,0 +1,382 @@
+/* ==========================================================================
+   PROFILE & ADDRESS MANAGEMENT STYLES
+   Modern Casual Minimalist - Forest Green Theme
+   ========================================================================== */
+
+.profileContainer {
+  min-height: calc(100vh - 200px);
+  padding: 36px 0 60px 0;
+  background-color: #fbfbf9;
+}
+
+.profileLayout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .profileLayout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Left Sidebar */
+.profileSidebar {
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #ebebe8;
+  padding: 24px;
+}
+
+.userSummary {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f0f0ed;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2d5a43 0%, #1f4231 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(45, 90, 67, 0.2);
+}
+
+.userName {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1c1f26;
+  margin-bottom: 4px;
+}
+
+.userBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  background-color: #eaf4ed;
+  color: #2d5a43;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.menuList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #475467;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.menuItem:hover {
+  background-color: #f7f7f5;
+  color: #1c1f26;
+}
+
+.menuItem.active {
+  background-color: #eaf4ed;
+  color: #2d5a43;
+  font-weight: 600;
+}
+
+.badgeCount {
+  margin-left: auto;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background-color: #c85a32;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* Right Content Area */
+.contentCard {
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #ebebe8;
+  padding: 32px;
+}
+
+.contentHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f0f0ed;
+  margin-bottom: 24px;
+}
+
+.contentTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1c1f26;
+  margin-bottom: 4px;
+}
+
+.contentSubtitle {
+  font-size: 13px;
+  color: #717680;
+}
+
+.actionBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background-color: #2d5a43;
+  color: #ffffff;
+  border-radius: 10px;
+  border: none;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.actionBtn:hover {
+  background-color: #234735;
+}
+
+/* Profile Form */
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+@media (max-width: 640px) {
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.fieldLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: #344054;
+}
+
+.fieldInput {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #d0d5dd;
+  font-size: 14px;
+  color: #1c1f26;
+  outline: none;
+  background-color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.fieldInput:focus {
+  border-color: #2d5a43;
+  box-shadow: 0 0 0 4px rgba(45, 90, 67, 0.1);
+}
+
+.saveBtn {
+  padding: 12px 24px;
+  background-color: #2d5a43;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.saveBtn:hover {
+  background-color: #234735;
+}
+
+/* Address List */
+.addressGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.addressCard {
+  border: 1.5px solid #ebebe8;
+  border-radius: 14px;
+  padding: 20px;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.addressCard.isDefault {
+  border-color: #2d5a43;
+  background-color: #fbfdfc;
+}
+
+.addressCardHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.addressLabel {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1c1f26;
+}
+
+.defaultBadge {
+  font-size: 11px;
+  font-weight: 600;
+  color: #2d5a43;
+  background-color: #eaf4ed;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.addressRecipient {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1c1f26;
+  margin-bottom: 4px;
+}
+
+.addressPhone {
+  font-size: 13px;
+  color: #717680;
+  margin-bottom: 8px;
+}
+
+.addressFull {
+  font-size: 13px;
+  color: #475467;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.addressCardActions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #f0f0ed;
+}
+
+.addressActionBtn {
+  background: none;
+  border: none;
+  font-size: 13px;
+  font-weight: 600;
+  color: #2d5a43;
+  cursor: pointer;
+  padding: 0;
+}
+
+.addressActionBtn:hover {
+  text-decoration: underline;
+}
+
+.addressActionBtn.danger {
+  color: #c85a32;
+}
+
+/* Modal Overlay for Add/Edit Address */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 16px;
+}
+
+.modalBox {
+  background-color: #ffffff;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 520px;
+  padding: 28px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #f0f0ed;
+}
+
+.modalTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1c1f26;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  color: #717680;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 4px;
+}
+
+.modalForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.cancelBtn {
+  padding: 10px 18px;
+  background-color: #f2f4f7;
+  color: #475467;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
