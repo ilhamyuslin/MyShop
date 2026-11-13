@@ -4,10 +4,12 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { X, QrCode, Sparkles } from "lucide-react";
 import { useAuthModalStore } from "@/store/useAuthModalStore";
+import { useUserAuthStore } from "@/store/useUserAuthStore";
 import styles from "@/styles/store/auth-modal.module.css";
 
 export function AuthModal() {
   const { isOpen, mode, closeAuthModal, setMode } = useAuthModalStore();
+  const login = useUserAuthStore((state) => state.login);
   const [identifier, setIdentifier] = useState("");
   const [name, setName] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -21,9 +23,12 @@ export function AuthModal() {
     setIsSubmitting(true);
     setTimeout(() => {
       setIsSubmitting(false);
-      alert(`Berhasil masuk sebagai ${identifier}!`);
+      login({
+        name: mode === "register" && name.trim() ? name : identifier.split("@")[0],
+        email: identifier.includes("@") ? identifier : `${identifier}@mail.com`,
+      });
       closeAuthModal();
-    }, 800);
+    }, 600);
   };
 
   return (
@@ -129,7 +134,10 @@ export function AuthModal() {
             setIsSubmitting(true);
             setTimeout(() => {
               setIsSubmitting(false);
-              alert("Login dengan Google berhasil!");
+              login({
+                name: "Ilham Yuslin",
+                email: "ilham.yuslin@gmail.com",
+              });
               closeAuthModal();
             }, 600);
           }}
@@ -170,3 +178,4 @@ export function AuthModal() {
     </div>
   );
 }
+

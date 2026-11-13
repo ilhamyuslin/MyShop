@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, Compass, ShoppingBag, ClipboardList, LifeBuoy } from "lucide-react";
+import { Home, Compass, ShoppingBag, ClipboardList, LifeBuoy, User } from "lucide-react";
 import { useCartStore } from "@/store/useCartStore";
 import styles from "@/styles/store/navbar.mobile.module.css";
 
@@ -21,7 +21,7 @@ export function MobileBottomNav() {
     { label: "Katalog", href: "/products", icon: Compass },
     { label: "Keranjang", href: "/cart", icon: ShoppingBag, badge: totalItems },
     { label: "Pesanan", href: "/orders", icon: ClipboardList },
-    { label: "Bantuan", href: "/help", icon: LifeBuoy },
+    { label: "Akun", href: "/profile", icon: User },
   ];
 
   return (
