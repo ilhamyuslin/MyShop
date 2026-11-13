@@ -1,0 +1,241 @@
+/* ==========================================================================
+   AUTH MODAL STYLES (Tokopedia-style Popup)
+   Modern Casual Minimalist - Forest Green Theme
+   ========================================================================== */
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 16px;
+  animation: fadeIn 0.2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modalBox {
+  background-color: #ffffff;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 440px;
+  padding: 32px 36px 36px 36px;
+  box-shadow: 0 20px 60px -15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: slideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px) scale(0.96);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #717680;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.closeBtn:hover {
+  background-color: #f2f4f7;
+  color: #1c1f26;
+}
+
+.modalHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  padding-right: 24px;
+}
+
+.modalTitle {
+  font-size: 24px;
+  font-weight: 800;
+  color: #1c1f26;
+  letter-spacing: -0.5px;
+}
+
+.switchModeBtn {
+  background: none;
+  border: none;
+  color: #2d5a43;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+  transition: opacity 0.15s ease;
+}
+
+.switchModeBtn:hover {
+  text-decoration: underline;
+  opacity: 0.85;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #475467;
+}
+
+.inputField {
+  width: 100%;
+  padding: 13px 16px;
+  border-radius: 10px;
+  border: 1px solid #d0d5dd;
+  font-size: 14px;
+  color: #1c1f26;
+  outline: none;
+  transition: all 0.2s ease;
+  background-color: #ffffff;
+}
+
+.inputField:focus {
+  border-color: #2d5a43;
+  box-shadow: 0 0 0 4px rgba(45, 90, 67, 0.1);
+}
+
+.inputField::placeholder {
+  color: #98a2b3;
+}
+
+.forgotPassword {
+  align-self: flex-end;
+  color: #2d5a43;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.forgotPassword:hover {
+  text-decoration: underline;
+}
+
+.primaryBtn {
+  width: 100%;
+  padding: 14px;
+  background-color: #2d5a43;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(45, 90, 67, 0.25);
+}
+
+.primaryBtn:hover {
+  background-color: #234735;
+}
+
+.primaryBtn:active {
+  transform: scale(0.99);
+}
+
+.primaryBtn:disabled {
+  background-color: #e4e7ec;
+  color: #98a2b3;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 22px 0 20px 0;
+  text-align: center;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #eaecf0;
+}
+
+.dividerText {
+  padding: 0 12px;
+  font-size: 12px;
+  color: #98a2b3;
+  font-weight: 500;
+}
+
+.secondaryBtn {
+  width: 100%;
+  padding: 12px;
+  background-color: #ffffff;
+  border: 1px solid #d0d5dd;
+  border-radius: 10px;
+  color: #344054;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  transition: all 0.15s ease;
+}
+
+.secondaryBtn:hover {
+  background-color: #f9fafb;
+  border-color: #98a2b3;
+}
+
+.helpFooter {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 13px;
+  color: #667085;
+}
+
+.helpLink {
+  color: #2d5a43;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.helpLink:hover {
+  text-decoration: underline;
+}

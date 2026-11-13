@@ -4,12 +4,14 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Search, ShoppingBag, ChevronDown, ShieldCheck, HelpCircle, Truck, Layers } from "lucide-react";
 import { useCartStore } from "@/store/useCartStore";
+import { useAuthModalStore } from "@/store/useAuthModalStore";
 import { DUMMY_CATEGORIES } from "@/lib/dummy-data";
 import styles from "@/styles/store/navbar.desktop.module.css";
 
 export function StoreNavbarDesktop() {
   const [mounted, setMounted] = useState(false);
   const totalItems = useCartStore((state) => state.getTotalItems());
+  const openAuthModal = useAuthModalStore((state) => state.openAuthModal);
   const [isCategoryOpen, setIsCategoryOpen] = useState(false);
 
   useEffect(() => {
@@ -123,14 +125,22 @@ export function StoreNavbarDesktop() {
 
             <span className={styles.authDivider} />
 
-            {/* Auth Buttons: Masuk & Daftar */}
+            {/* Auth Buttons: Masuk & Daftar (Trigger Auth Popup) */}
             <div className={styles.authGroup}>
-              <Link href="/login" className={styles.loginBtn}>
+              <button
+                type="button"
+                onClick={() => openAuthModal("login")}
+                className={styles.loginBtn}
+              >
                 Masuk
-              </Link>
-              <Link href="/register" className={styles.registerBtn}>
+              </button>
+              <button
+                type="button"
+                onClick={() => openAuthModal("register")}
+                className={styles.registerBtn}
+              >
                 Daftar
-              </Link>
+              </button>
             </div>
           </div>
         </div>

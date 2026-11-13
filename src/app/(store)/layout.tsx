@@ -1,6 +1,7 @@
 import { StoreNavbarDesktop } from "@/components/store/navigation/StoreNavbarDesktop";
 import { MobileBottomNav } from "@/components/store/navigation/MobileBottomNav";
 import { StoreFooter } from "@/components/store/StoreFooter";
+import { AuthModal } from "@/components/store/auth/AuthModal";
 
 export default function StoreLayout({
   children,
@@ -16,6 +17,9 @@ export default function StoreLayout({
 
       {/* Main Content Area */}
       <main className="flex-1">{children}</main>
+
+      {/* Global Auth Modal Popup */}
+      <AuthModal />
 
       {/* Desktop Footer (Hidden on Mobile) */}
       <div className="hidden md:block">
