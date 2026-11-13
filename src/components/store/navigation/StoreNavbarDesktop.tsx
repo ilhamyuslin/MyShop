@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Search, ShoppingBag, ChevronDown, ShieldCheck, HelpCircle, Truck, Layers } from "lucide-react";
+import { Search, ShoppingBag, ChevronDown, ShieldCheck, HelpCircle, Truck, Layers, Heart } from "lucide-react";
 import { useCartStore } from "@/store/useCartStore";
+import { useWishlistStore } from "@/store/useWishlistStore";
 import { useAuthModalStore } from "@/store/useAuthModalStore";
 import { DUMMY_CATEGORIES } from "@/lib/dummy-data";
 import styles from "@/styles/store/navbar.desktop.module.css";
@@ -11,6 +12,7 @@ import styles from "@/styles/store/navbar.desktop.module.css";
 export function StoreNavbarDesktop() {
   const [mounted, setMounted] = useState(false);
   const totalItems = useCartStore((state) => state.getTotalItems());
+  const wishlistItems = useWishlistStore((state) => state.items.length);
   const openAuthModal = useAuthModalStore((state) => state.openAuthModal);
   const [isCategoryOpen, setIsCategoryOpen] = useState(false);
 
@@ -115,10 +117,16 @@ export function StoreNavbarDesktop() {
             </div>
           </div>
 
-          {/* Actions Right (Cart & Auth Buttons) */}
+          {/* Actions Right (Wishlist, Cart & Auth Buttons) */}
           <div className={styles.actionsRight}>
+            {/* Wishlist Icon with badge */}
+            <Link href="/wishlist" className={styles.cartBtn} aria-label="Wishlist Saya" title="Wishlist Saya">
+              <Heart className="w-5 h-5 text-slate-800" />
+              {mounted && wishlistItems > 0 && <span className={styles.cartBadge}>{wishlistItems}</span>}
+            </Link>
+
             {/* Cart Icon with badge */}
-            <Link href="/cart" className={styles.cartBtn} aria-label="Keranjang Belanja">
+            <Link href="/cart" className={styles.cartBtn} aria-label="Keranjang Belanja" title="Keranjang Belanja">
               <ShoppingBag className="w-5 h-5 text-slate-800" />
               {mounted && totalItems > 0 && <span className={styles.cartBadge}>{totalItems}</span>}
             </Link>
